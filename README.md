@@ -9,7 +9,17 @@
 * Create a method that asks the user to enter a number between 2-10. 
 * Then, prompt the user that number of times for random numbers.
 * After the user has inputted all of the numbers. Find the average of all the numbers inputted.
-* Specs: 1. Do not let the user put in negative numbers 2. Confirm each input is a real number
+* Specs: 1. Do not let the user put in negative numbers 2. Confirm each input is a real number.
+
+# Challenge 3
+* Create a method that will output to the console a design.
+
+# Challenge 4
+* Write a method that brings in an integer array and returns the number that appears the most times. 
+* If there are no duplicates, return the first number in the array. 
+* If more than one number show up the same amount of time, return the first found.
+
+
 
 ## Notes:
 * ctrl+k + ctrl+c to comments muliple lines
