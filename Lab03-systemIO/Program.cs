@@ -28,6 +28,7 @@ namespace Lab03_systemIO
 
             //Console.WriteLine(Challenge5(array));
             Challenge6();
+            Challenge7();
 
         }
 
@@ -186,7 +187,11 @@ namespace Lab03_systemIO
                 sw.Write(word);
             } ;
 
+        }
 
+        public static void Challenge7()
+        {
+            Console.WriteLine(File.ReadAllText("../../../word.txt"));
         }
     }
 }
