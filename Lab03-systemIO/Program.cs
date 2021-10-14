@@ -6,14 +6,20 @@ namespace Lab03_systemIO
    public class Program
     {
         static void Main(string[] args)
-        {
+        {// challenge 01:
             Console.WriteLine("Hello, Let's do some challenges");
             Console.WriteLine("Please enter 3 numbers:");
             string threeNumbers = Console.ReadLine();
             Console.WriteLine(FirstChallenge(threeNumbers));
 
+         // challenge 02:
+            Console.WriteLine("Enter a number between 2 and 10");
+            string number = Console.ReadLine();
+            Console.WriteLine(SecondChallenge(number));
 
         }
+
+
         // Challenge 01:
        // ctrl+k + ctrl+c to comments muliple lines
         public static int FirstChallenge(string numbers)
@@ -40,6 +46,18 @@ namespace Lab03_systemIO
 
             }
             return productResult;
+        }
+    public static int SecondChallenge(string number)
+        { int num = Convert.ToInt32(number);
+            int sum = 0;
+            for (int i = 0; i < num; i++)
+            {
+                Console.WriteLine($"{i+1} of {num} - Enter a number:");
+                int newNum = Convert.ToInt32(Console.ReadLine());
+                sum += newNum;
+
+            }
+            return sum / num;
         }
     }
 }
