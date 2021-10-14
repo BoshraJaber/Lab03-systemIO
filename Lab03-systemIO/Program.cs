@@ -3,11 +3,11 @@ using System.IO;
 
 namespace Lab03_systemIO
 {
-    class Program
+   public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello, Let's do some challenges");
             Console.WriteLine("Please enter 3 numbers:");
             string threeNumbers = Console.ReadLine();
             Console.WriteLine(FirstChallenge(threeNumbers));
@@ -16,7 +16,7 @@ namespace Lab03_systemIO
         }
         // Challenge 01:
        // ctrl+k + ctrl+c to comments muliple lines
-        static int FirstChallenge(string numbers)
+        public static int FirstChallenge(string numbers)
         {
            int productResult = 1;
             string[] arrayOfNumbers = numbers.Split(' ');
