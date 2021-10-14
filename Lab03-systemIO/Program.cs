@@ -15,7 +15,7 @@ namespace Lab03_systemIO
          // challenge 02:
             Console.WriteLine("Enter a number between 2 and 10");
             string number = Console.ReadLine();
-            Console.WriteLine(SecondChallenge(number));
+           Console.WriteLine(SecondChallengeHelper(number));
 
         }
 
@@ -47,7 +47,7 @@ namespace Lab03_systemIO
             }
             return productResult;
         }
-    public static int SecondChallenge(string number)
+    public static int SecondChallengeHelper(string number)
         { int num = Convert.ToInt32(number);
             int sum = 0;
             for (int i = 0; i < num; i++)
@@ -57,8 +57,16 @@ namespace Lab03_systemIO
                 sum += newNum;
 
             }
-            return sum / num;
+            SecondChallenge(num, sum);
+            return sum;
         }
+
+        public static int SecondChallenge(int roundNumber,  int sum)
+        {
+            return sum / roundNumber;
+        }
+
+
     }
 }
 
