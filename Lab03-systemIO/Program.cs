@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Lab03_systemIO
 {
@@ -21,7 +23,8 @@ namespace Lab03_systemIO
             ThirdChallenge();
 
             // challenge 04:
-
+            int[] array = { 1, 5, 10, 11, 2};
+            Console.WriteLine(Challenge4(array));
 
         }
 
@@ -76,7 +79,7 @@ namespace Lab03_systemIO
         {
             string space = " ";
             string star = "*";
-            
+
             //  string[,] arr = new string[9, 9];
             for (int i = 0; i < 9; i++)
             {
@@ -91,7 +94,7 @@ namespace Lab03_systemIO
                     {
                         result += star;
                     }
-                    for (int j = 4; j <= 4+i; j++)
+                    for (int j = 4; j <= 4 + i; j++)
                     {
                         result += star;
                     }
@@ -124,14 +127,37 @@ namespace Lab03_systemIO
 
         }
 
-        public static void Challenge4(int[] arr)
+        public static int Challenge4(int[] array)
         {
-            int mostRepeated = arr[0];
-            //    for (int i = 0; i < arr.length; i++)
-            //    {
+            // data type of key and value insside <>
+            var dictionary = new Dictionary<int, int>();
 
-            //    }
+            //foreach (var value in array)
+            //{
+            //    // When the key is not found, "count" will be initialized to 0
+            //    dictionary.TryGetValue(value, out int count);
+            //    dictionary[value] = count + 1;
             //}
+            foreach (int n in array)
+            {
+                if (!dictionary.ContainsKey(n))
+                    dictionary[n] = 0;
+                dictionary[n]++;
+            }
+            //foreach (var pair in dictionary)
+            //{ Console.WriteLine(pair); }
+            if (dictionary.Values.Max() > 1)
+            {
+                var max = dictionary.Keys.Max();
+                Console.WriteLine(max);
+                return max;
+            } else
+            {
+                
+               return array[0];
+            }
+
+
         }
     }
 }
