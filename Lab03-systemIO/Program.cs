@@ -26,6 +26,8 @@ namespace Lab03_systemIO
             int[] array = { 1, 5, 10, 11, 2};
             Console.WriteLine(Challenge4(array));
 
+            Console.WriteLine(Challenge5(array));
+
         }
 
 
@@ -158,6 +160,20 @@ namespace Lab03_systemIO
             }
 
 
+        }
+
+        public static int Challenge5(int[] array)
+        {
+            int max = array[0];
+            for (int i = 0; i < array.Length; i++)
+            {
+                if(max < array[i])
+                {
+                    max = array[i];
+                }
+              
+            }
+            return max;
         }
     }
 }
