@@ -19,6 +19,12 @@
 * If there are no duplicates, return the first number in the array. 
 * If more than one number show up the same amount of time, return the first found.
 
+# Challenge 5
+* Write a method in that finds the maximum value in the array. 
+* The array is not sorted. You may not use .Sort()
+
+# Challenge 6:
+* Write a method that asks the user to input a word, and then saves that word into an external file named words.txt
 
 
 ## Notes:

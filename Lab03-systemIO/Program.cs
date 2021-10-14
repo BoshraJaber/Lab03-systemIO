@@ -20,13 +20,14 @@ namespace Lab03_systemIO
             //Console.WriteLine(SecondChallengeHelper(number));
 
             // challenge 03:
-            ThirdChallenge();
+            //ThirdChallenge();
 
             // challenge 04:
-            int[] array = { 1, 5, 10, 11, 2};
-            Console.WriteLine(Challenge4(array));
+            //int[] array = { 1, 5, 10, 11, 2};
+            //Console.WriteLine(Challenge4(array));
 
-            Console.WriteLine(Challenge5(array));
+            //Console.WriteLine(Challenge5(array));
+            Challenge6();
 
         }
 
@@ -174,6 +175,18 @@ namespace Lab03_systemIO
               
             }
             return max;
+        }
+
+        public static void Challenge6()
+        {
+            Console.WriteLine(" enter one word to be saved in a text file");
+            var word = Console.ReadLine();
+            string path = "../../../word.txt";
+            using (StreamWriter sw = new StreamWriter(path)) {
+                sw.Write(word);
+            } ;
+
+
         }
     }
 }
